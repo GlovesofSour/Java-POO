@@ -9,7 +9,7 @@ public class Atividade3 {
 		
 		String produto;
 		int i, num, qtde;
-		double valor, subtotal;
+		double valor, subtotal, total=0;
 		
 		for(i=0; i < 3; i++) {
 			
@@ -23,15 +23,17 @@ public class Atividade3 {
 			qtde = sc.nextInt();
 			
 			subtotal = valor * qtde;
+			total += subtotal;
 			
 			System.out.println("\nPedido " + (i + 1) + ":");
             System.out.println("Número da Mesa: " + num);
             System.out.println("Produto: " + produto);
-            System.out.println("Valor: " + valor);
+            System.out.println("Valor: R$" + valor);
             System.out.println("Quantidade: " + qtde);
-            System.out.println("Subtotal: " + subtotal);
+            System.out.println("Subtotal: R$" + subtotal +"\n");
 		}
-		
+		 System.out.println("Valor total: R$" + total);
+		 
 		sc.close();
 	}
 
